@@ -18,7 +18,7 @@ int main(void)
 	OLED_Init();		//OLED初始化
 	Serial_Init(115200);
 	Serial_SendString(send1,6);
-	
+	//主循环
 	while (1)
 	{
 			OLED_ShowChar(1,1,(char)ptr[0]);
