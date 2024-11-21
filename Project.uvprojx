@@ -710,6 +710,16 @@
               <FileType>5</FileType>
               <FilePath>.\System\Myuart.h</FilePath>
             </File>
+            <File>
+              <FileName>MyI2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\System\MyI2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\System\MyI2c.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
