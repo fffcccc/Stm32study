@@ -31,6 +31,7 @@
 ".\objects\ic.o"
 ".\objects\dma.o"
 ".\objects\myuart.o"
+".\objects\sf_i2c.o"
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 ".\objects\key.o"

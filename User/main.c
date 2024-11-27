@@ -6,6 +6,7 @@
 #include "ADC.h"
 #include "Myuart.h"
 
+
 uint8_t send = 44;
 u8* ptr;
 char send1[6]="yuygg";

@@ -711,14 +711,24 @@
               <FilePath>.\System\Myuart.h</FilePath>
             </File>
             <File>
-              <FileName>MyI2c.c</FileName>
+              <FileName>sf_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\System\MyI2c.c</FilePath>
+              <FilePath>.\System\sf_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>MyI2c.h</FileName>
+              <FileName>sf_i2c.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\System\MyI2c.h</FilePath>
+              <FilePath>.\System\sf_i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>My_SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\System\My_SPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_SPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\System\My_SPI.h</FilePath>
             </File>
           </Files>
         </Group>
