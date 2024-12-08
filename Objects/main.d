@@ -35,3 +35,4 @@
 .\objects\main.o: .\Hardware\ADC.h
 .\objects\main.o: .\System\Myuart.h
 .\objects\main.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: .\Hardware\W25Q64.h

@@ -28,5 +28,4 @@
 .\objects\sf_i2c.o: .\Library\stm32f10x_usart.h
 .\objects\sf_i2c.o: .\Library\stm32f10x_wwdg.h
 .\objects\sf_i2c.o: .\Library\misc.h
-.\objects\sf_i2c.o: System\sf_i2c.h
-.\objects\sf_i2c.o: E:\Keil5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sf_i2c.o: System\Delay.h

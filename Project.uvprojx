@@ -835,6 +835,21 @@
               <FileType>5</FileType>
               <FilePath>.\Hardware\ADC.h</FilePath>
             </File>
+            <File>
+              <FileName>W25Q64.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\W25Q64.c</FilePath>
+            </File>
+            <File>
+              <FileName>W25Q64.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\W25Q64.h</FilePath>
+            </File>
+            <File>
+              <FileName>W25Q64_lns.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\W25Q64_lns.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

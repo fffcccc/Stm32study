@@ -31,7 +31,7 @@ void PWM_Init(void)
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;				//定义结构体变量
 	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;     //时钟分频，选择不分频，此参数用于配置滤波器时钟，不影响时基单元功能
 	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up; //计数器模式，选择向上计数
-	TIM_TimeBaseInitStructure.TIM_Period = 100 - 1;					//计数周期，即ARR的值
+	TIM_TimeBaseInitStructure.TIM_Period = 2000 - 1;					//计数周期，即ARR的值
 	TIM_TimeBaseInitStructure.TIM_Prescaler = 720 - 1;				//预分频器，即PSC的值
 	TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 0;            //重复计数器，高级定时器才会用到
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);             //将结构体变量交给TIM_TimeBaseInit，配置TIM2的时基单元
@@ -44,7 +44,7 @@ void PWM_Init(void)
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;				//输出比较模式，选择PWM模式1
 	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;		//输出极性，选择为高，若选择极性为低，则输出高低电平取反
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;	//输出使能
-	TIM_OCInitStructure.TIM_Pulse = 50;								//初始的CCR值
+	TIM_OCInitStructure.TIM_Pulse = 150;								//初始的CCR值
 	TIM_OC1Init(TIM2, &TIM_OCInitStructure);						//将结构体变量交给TIM_OC1Init，配置TIM2的输出比较通道1
 	
 	/*TIM使能*/
@@ -73,4 +73,21 @@ void PWM_SetCompare1(uint16_t Compare)
 void PWM_SetPrescaler(uint16_t Prescaler)
 {
 	TIM_PrescalerConfig(TIM2, Prescaler, TIM_PSCReloadMode_Immediate);		//设置PSC的值
+}
+
+
+void MG996R_Set_Angle(int16_t angle)
+{
+	uint16_t CCR_value = 0;
+	
+	if ((-90 <= angle) && (angle <= 90))
+	{
+		CCR_value = (10. / 9) * angle + 150;		// 角度 to CCR值
+	}
+	else
+	{
+		CCR_value = 150;
+	}
+	
+	PWM_SetCompare1(CCR_value);
 }
